@@ -1,0 +1,40 @@
+:root {
+    --pink- : #fe7f9c;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Helvetica Neue';
+}
+.current-sale {
+    background-color: var(--pink-);
+    margin: auto;
+    padding: 22px;
+    text-align: center;
+    font-family: 'Sephora';
+    font-weight: normal;
+    font-size: 0.85rem;
+}
+
+.title-bar {
+    align-items: flex;
+    justify-content: right;
+    background-color: #fff;
+    padding: 0 0  20px;
+}
+
+.company-title {
+    font-size: 1.5rem;
+    font-weight: 500;
+    letter-spacing: 0.9rem;
+    border: 1px solid blue;
+    max-width: 250px;
+}
+
+.search-form {
+    display:flex;
+    border-radius: 10px;
+    border: 1px solid black;
+    max-width: 100px;
+}
