@@ -1,9 +1,9 @@
 import { StyleSheet, Text, View } from "react-native";
-//consider adding safe area view to application screens
-export default function Index() {
+
+export default function About() {
   return (
     <View style= {styles.viewStyle}>
-      <Text>Home</Text>
+      <Text>All About BeautiFind!</Text>
     </View>
   );
 }
@@ -13,7 +13,6 @@ const styles = StyleSheet.create ({
     flex: 1,
     justifyContent: "center",
     alignItems: "center",
-    backgroundColor: '#ffd3db'
   }
 })
 
