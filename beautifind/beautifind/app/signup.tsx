@@ -1,8 +1,7 @@
-import { Link, useRouter } from 'expo-router';
+import { useRouter } from 'expo-router';
 import { useState } from 'react';
 import { Pressable, StyleSheet, Text, TextInput, View } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
-
 
 export default function LoginScreen() {
 
@@ -13,15 +12,16 @@ export default function LoginScreen() {
     <SafeAreaView>
       <View style={styles.container}>
         <View style={styles.loginForm}>
-          <Text style={styles.title}>Login or Sign up</Text>
+          <Text style={styles.title}>Sign Up</Text>
+          <TextInput style={styles.input} placeholder='First Name' placeholderTextColor={'grey'}/>
           <TextInput style={styles.input} placeholder='Email' placeholderTextColor={'grey'}/>
           <TextInput style={styles.input} placeholder='Password' placeholderTextColor={'grey'} secureTextEntry={true}/>
-          <Pressable style={({pressed}) => [styles.loginButton, isHovered && styles.hoverLoginButton, pressed && styles.loginButton]} 
+          <TextInput style={styles.input} placeholder='Re-enter your Password' placeholderTextColor={'grey'} secureTextEntry={true}/>
+          <Pressable style={({pressed}) => [styles.signupButton, isHovered && styles.hoverSignupButton, pressed && styles.signupButton]} 
           onHoverIn={() => setIsHovered(true)} 
           onHoverOut={() => setIsHovered(false)}
           onPress={() => router.navigate('/search')}>
-            <Text style={styles.loginButtonText}>Login</Text></Pressable>
-          <Link href="/signup"style={styles.forgotPassword}>Don't have an account? Register Here</Link>
+            <Text style={styles.signupButtonText}>Sign Up</Text></Pressable>
         </View>
       </View>
     </SafeAreaView>
@@ -54,10 +54,9 @@ const styles = StyleSheet.create({
     backgroundColor: '#f0f0f0' ,
     borderRadius: 8,
     margin: 8,
-
 }, 
-
-  loginButton: {
+  signupButton: {
+    marginTop: 30,
     backgroundColor: '#ffd3db',
     height: 50,
     width: 300,
@@ -67,11 +66,11 @@ const styles = StyleSheet.create({
     fontWeight: 400,
   }, 
 
-  loginButtonText: {
+  signupButtonText: {
     color: "#ffffff"
   },
 
-  hoverLoginButton: {
+  hoverSignupButton: {
     backgroundColor: '#9d8189'
   },
 

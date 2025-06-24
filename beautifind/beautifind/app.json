@@ -4,7 +4,7 @@
     "slug": "beautifind",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/images/icon.png",
+    "icon": "./assets/images/beautifind_logo.png",
     "scheme": "beautifind",
     "userInterfaceStyle": "automatic",
     "newArchEnabled": true,

@@ -1,0 +1,8 @@
+Hex codes for color scheme:
+
+pastel green: #d8e2dc
+light pink: #ffd3db
+pink: #f4acb7
+dark pink: #9d8189
+
+light grey: #f0f0f0
