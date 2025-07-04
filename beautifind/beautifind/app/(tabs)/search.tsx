@@ -9,16 +9,17 @@ export default function Search() {
     <ScrollView>
     <SafeAreaView style={styles.container}>
       <View style={styles.pageHeader}>
-      <View style={styles.searchBar}>
-        <FontAwesome style={styles.searchIcon}name="search"/>
-        <TextInput placeholder='Search'></TextInput>
+        <View style={styles.searchBar}>
+          <FontAwesome style={styles.searchIcon}name="search"/>
+          <TextInput placeholder='Search'></TextInput>
+        </View>
+        <View style={styles.filterBox}>
+          <Pressable>
+            <Text style={styles.filterBoxTitle}>Filters</Text>
+          </Pressable>
+        </View>
       </View>
-      <View style={styles.filterBox}>
-        <Pressable>
-          <Text style={styles.filterBoxTitle}>Filters</Text>
-        </Pressable>
-      </View>
-      </View>
+      <Text style={styles.searchingFor}>Searching for: "Search Input Goes Here"</Text>
       <View style={styles.products}>
         <Pressable onPress={() => router.navigate('/product')}>
           <View style={styles.productCard}>
@@ -136,6 +137,12 @@ const styles = StyleSheet.create({
     fontWeight: 500,
   },
 
+  searchingFor: {
+    margin: 20,
+    fontSize: 13,
+    fontWeight: 500,
+  },
+
   searchIcon: {
     padding: 8,
     fontSize: 13,
@@ -143,6 +150,7 @@ const styles = StyleSheet.create({
 
   products: {
     marginLeft: 20,
+    marginRight: 20,
     flexDirection: 'row',
     flexWrap: 'wrap',
   },
